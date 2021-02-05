@@ -1,0 +1,148 @@
+<!DOCTYPE htlm>
+
+<html>
+
+ <head>
+
+  <title> web page</title>
+
+  <style type="text/css">
+   #body           {
+                    background-image : "sgole.png" ;
+                    height          : 100vh ;
+                   }
+   .terms-checkbox {
+                    position        : relative ;
+                    margin-left     : 40% ;
+                    margin-top      : 0px ;
+                   }
+   .terms-accept   {
+                    display         : inline-block ;
+                    position        : relative ;
+                    font-family     : 'Open Sana'sans-serif ;
+                    font-size       : 1px ;
+                    margin-left     : 40% ;
+                    color           : blue ;
+                   }
+   #header         {
+                    background-color: transparent ;
+                    color : white ;
+                    padding : 75px ;
+                    font-size : 50px ;
+                    margin-left: 34.5% ;
+                   }
+   #text1          {
+                    font-size : 25px ;
+                    height : 5px ;                 
+                    font-family : 'Open Sans', sans-serif ;   
+                    color: greenyellow ;  
+                    text-align: center ;
+                    margin-left: 1% ;              
+                   }
+   #text2          {
+                    font-size : 10px ;
+                    height : 25px ;                 
+                    font-family : 'Open Sans', sans-serif ;   
+                    color: aliceblue ;
+                    text-align: center ;
+                    margin-left: 42% ;                
+                   }
+   #names          {
+                    margin-top: 0% ;
+                    margin-left: 40% ;
+                    background-color: transparent ;
+                    color: aliceblue ;
+                    padding: 1% ;
+                    border-bottom: 15% ;
+                    outline-color: violet ;
+                    -moz-outline-radius-bottomleft: 10% ;
+                    -moz-outline-radius-bottomright: 10% ;
+                    border-left: hidden ;
+                    border-right: hidden ;
+                    border-top: hidden ;
+                    border-radius: 10% ;
+                    border-bottom-color: violet ;
+                    text-align: center ;
+                   }
+   #pass           {
+                     background-color: transparent ;
+                     color: aliceblue ;
+                     margin-left: 40% ;
+                     padding: 1% ;
+                     border-bottom: 15% ;
+                     outline-color: violet ;
+                     border-left: hidden ;
+                     border-right: hidden ;
+                     border-top: hidden ;
+                     border-radius: 10% ;
+                     border-bottom-color: violet ;
+                     text-align: center ;
+                   }
+   #btn            {
+                     background-color: transparent ;
+                     color: violet ;
+                     margin-left: 45.5% ;
+                     padding: 0.4% ;
+                     border-left: hidden ;
+                     border-right: hidden ;
+                     border-top: hidden ;
+                     border-radius: 10% ;
+                     border-bottom-color: violet ;
+                     outline-color: gold ;
+                   }
+  </style>
+
+ </head>
+
+ <body>
+
+  <div id="body">
+    <h1 id="header">Hi User</h1>
+      <h2><lable id="text2">Please</lable><label id="text1">Log In</label></label></h2>
+    <form action="vodacom.htmT">
+      <br>
+      <input type="text" placeholder="user name" id="names" required>
+      <br>
+      <br> 
+      <input type= "password" placeholder="password" id="pass" required>
+      <br>
+      <br>
+      <button type="btn" id="btn" onclick="changeColor()">submit</button>
+ 
+    </form>
+    <form accept="terms-accept" aria-required="false"> 
+      <div class="terms">
+        <input class="terms-checkbox" type="checkbox" id="checking" aria-required="true">
+        <br>
+        <p class="terms-accept">
+        <a href="https://portal.samro.org.za/" id="terms-accept">Accept Terms and conditions</a>
+        </p>
+      </div>
+    </form>
+  <script type="text/javascript">
+
+   function changeColor(element) 
+  {
+    var pass= document.getElementById("pass").value;
+    var names= document.getElementById("names").value;
+    let chacked = document.getElementById("checking").value;
+                                 
+    if (pass=="")
+    {
+      alert("password can't be blank");
+      return 0;
+    }
+    else if (chacked != true)
+    {
+      alert ("Please accept the T's & C's!")
+      return 0;
+    }
+
+  }
+                                                                                              
+  </script>
+
+  </div>
+ </body>
+
+</html>
